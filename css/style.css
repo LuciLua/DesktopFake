@@ -28,8 +28,8 @@ body{
 
 .app-screen{
 
-    width: 1850px;
-    height: 900px;
+    width: 95vw;
+    height: 50vw;
 
     background-color: rgb(33, 36, 43);
     background-image: url(/img/wpp.jpg);
@@ -175,8 +175,8 @@ body{
 }
 
 .app-screen .screen-action .console{
-    width: 640px;
-    height: 400px;
+    width: 35vw;
+    height: 20vw;
     background-color: rgb(39, 39, 39);
 
     border-radius: 8px;
@@ -185,6 +185,8 @@ body{
     position: relative;
 
     overflow: hidden;
+
+    margin: 10px;
 }
 
 .app-screen .screen-action .shadow-apps{
@@ -246,17 +248,61 @@ body{
 }
 
 #max{
-    background-color: rgb(100, 121, 100);
+    background-color: rgb(78, 148, 78);
 }
 
 .app-screen .screen-action .console p{
     color: rgb(143, 142, 151);
     font-family: sans-serif;
-    font-size: 20px;
+    font-size: 1.2vw;
 
     letter-spacing: 1px;
 }
 
 .app-screen .screen-action .console p span{
     color: green;
+}
+
+
+/* dropzones */
+
+.dropzones{
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.59); */
+    position: absolute;
+}
+
+.dropzone{
+    width: 50%;
+    height: 50%;
+
+    position: absolute;
+}
+
+.dropzone:nth-child(1){
+    left: 0;
+    top: 0;
+}
+.dropzone:nth-child(2){
+    top: 0;
+    right: 0;
+}
+.dropzone:nth-child(3){
+    bottom: 0;
+    left: 0;
+}
+.dropzone:nth-child(4){
+    bottom: 0;
+    right: 0;
+}
+
+.highlight{
+    background-color: #1a1a1c4d;
+    border: 1px solid rgba(41, 40, 40, 0.618);
+}
+
+
+.console, .dropzone{
+    transition: 400ms;
 }

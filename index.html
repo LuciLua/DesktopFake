@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script>
+        function data(){ 
+        var data = document.getElementById('data');
+        var now = new Date
+        data.textContent =  (`${now.getDate()}/${now.getMonth()}/${now.getFullYear()}`)
+        console.log('data.textContent')
+        }
+</script>
+</head>
+<body onload="data()">
+    <div class="container">
+        <div class="app-screen">
+            <div class="header">
+                <ul class="ul-1">
+                    <li><a href="#">ico</a></li>
+                    <li><a href="#">ico</a></li>
+                    <li><a href="#">ico</a></li>
+                </ul>
+                <ul class="ul-2">
+                    <li><a href="#">ico</a></li>
+                    <li><a href="#">ico</a></li>
+                    <li id="data"></li>
+                </ul>
+            </div>
+            <div class="footer">
+                <div class="dock">
+                    <ul>
+                        <li><a href="#"><img src="img/terminal.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/chrome.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/folder.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/vscode.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/pycharm.svg" alt=""></a></li>
+                        <li><a href="#"><img src="img/spotify.svg" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="screen-action">
+                <div class="console">
+                    <div class="header">
+                        <ul>
+                            <li><a id="close" href="#"></a></li>
+                            <li><a id="min" href="#"></a></li>
+                            <li><a id="max" href="#"></a></li>
+                        </ul>
+                    </div>
+                    <p>C:\iunix\luci\Desktop <span>cd ./test</span></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

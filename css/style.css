@@ -183,6 +183,12 @@ body{
 
     padding: 50px 30px 10px 20px;
     position: relative;
+
+    overflow: hidden;
+}
+
+.app-screen .screen-action .shadow-apps{
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.473);
 }
 
 .app-screen .screen-action .console .header{
@@ -191,8 +197,9 @@ body{
     top: 0;
     height: 30px;
     margin-bottom: 30px;
+
     position: absolute;
-}
+    }
 
 .app-screen .screen-action .console .header ul{
     width: 100%;

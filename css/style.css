@@ -306,3 +306,18 @@ body{
 .console, .dropzone{
     transition: 400ms;
 }
+
+.is-dragging{
+    cursor: move;
+    opacity: 0.3;
+}
+
+.over{
+    background-color: rgba(72, 131, 72, 0.474);
+}
+
+.is-dragging{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

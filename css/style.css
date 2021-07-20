@@ -28,8 +28,8 @@ body{
 
 .app-screen{
 
-    width: 95vw;
-    height: 50vw;
+    width: 100%;
+    height: 90vh;
 
     background-color: rgb(33, 36, 43);
     background-image: url(/img/wpp.jpg);
@@ -98,7 +98,7 @@ body{
     bottom: 0;
 
     width: 100%;
-    height: 60px;
+    height: 50px;
     z-index: 20;
 }
 
@@ -133,8 +133,8 @@ body{
 }
 
 .app-screen .footer .dock ul li{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
 
     /* background-color: rgba(250, 250, 250, 0.789); */
     margin: 0 13px 0 13px;
@@ -175,8 +175,8 @@ body{
 }
 
 .app-screen .screen-action .console{
-    width: 35vw;
-    height: 20vw;
+    width: 50vh;
+    height: 30vh;
     background-color: rgb(39, 39, 39);
 
     border-radius: 8px;
@@ -254,7 +254,7 @@ body{
 .app-screen .screen-action .console p{
     color: rgb(143, 142, 151);
     font-family: sans-serif;
-    font-size: 1.2vw;
+    font-size: clamp(13px, 1.2vw, 17px);
 
     letter-spacing: 1px;
 }
@@ -278,6 +278,10 @@ body{
     height: 50%;
 
     position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .dropzone:nth-child(1){
@@ -299,7 +303,11 @@ body{
 
 .highlight{
     background-color: #1a1a1c4d;
-    border: 1px solid rgba(41, 40, 40, 0.618);
+    border: 1px solid rgba(0, 0, 0, 0.268);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -309,15 +317,13 @@ body{
 
 .is-dragging{
     cursor: move;
-    opacity: 0.3;
+    opacity: 0.7;
 }
 
 .over{
-    background-color: rgba(72, 131, 72, 0.474);
+    background-color: rgba(39, 75, 39, 0.138);
 }
 
 .is-dragging{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }

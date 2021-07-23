@@ -174,19 +174,26 @@ body{
     justify-content: center;
 }
 
+
 .app-screen .screen-action .console{
     width: 50vh;
     height: 30vh;
     background-color: rgb(39, 39, 39);
-
+    
     border-radius: 8px;
-
+    
     padding: 50px 30px 10px 20px;
+    
     position: relative;
-
     overflow: hidden;
-
+    
     margin: 10px;
+
+    display: none;
+}
+
+.app-screen .screen-action .consolef{
+    display: flex;
 }
 
 .app-screen .screen-action .shadow-apps{
@@ -282,6 +289,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    cursor: default;
 }
 
 .dropzone:nth-child(1){
@@ -302,8 +311,8 @@ body{
 }
 
 .highlight{
-    background-color: #1a1a1c4d;
-    border: 1px solid rgba(0, 0, 0, 0.268);
+    background-color: #2a2a2e4d;
+    border: 1px solid rgba(0, 0, 0, 0.111);
 
     display: flex;
     justify-content: center;
@@ -312,7 +321,7 @@ body{
 
 
 .console, .dropzone{
-    transition: 400ms;
+    transition: 400ms; 
 }
 
 .is-dragging{
@@ -321,9 +330,11 @@ body{
 }
 
 .over{
-    background-color: rgba(39, 75, 39, 0.138);
+    background-color: rgba(77, 77, 77, 0.289);
+
 }
 
 .is-dragging{
 
 }
+

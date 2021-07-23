@@ -62,3 +62,16 @@ function dragleave(){
 function dragdrop(){
 
 }
+
+// console open
+
+function toggleConsole(){
+    const actionConsole = document.querySelectorAll('.console')
+    
+    actionConsole.forEach(e => {
+        e.classList.toggle('consolef')
+        // e.style.backgroundColor= 'rgba(56, 56, 56, 0.663)'
+    })
+
+
+}

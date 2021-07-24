@@ -286,6 +286,14 @@ body{
     color: green;
 }
 
+.app-screen .screen-action .console p input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: green;
+    width: 50%;
+}
+
 
 /* dropzones */
 
@@ -366,15 +374,17 @@ body{
     
     padding: 50px 30px 10px 20px;
     
-    position: relative;
     overflow: hidden;
     
     margin: 10px;
-
+    
     display: none;
     align-items: center;
     justify-content: center;
+
+    position: relative;
 }
+
 
 .browser .search{
     width: 80%;
@@ -428,14 +438,20 @@ body{
     display: flex;
 }
 
+.app-screen .screen-action .browserg{
+    width: 80%;
+    height: 100%;
+    position: absolute;
+
+}
+
 
 /* files window */
 
 .file{
-    width: 95%;
-    height: 95%;
+    width: 50vh;
+    height: 30vh;
     background-color: transparent;
-    backdrop-filter: blur(9px);
     
     border-radius: 8px;
     
@@ -448,24 +464,47 @@ body{
     align-items: center;
     justify-content: center;
 
+    position: relative;
+    
     display: none;
+}
+
+.fileg, 
+.screen-action .browserg, 
+.app-screen .screen-action .consoleg{
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    position: absolute;
+}
+.consoleg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .filef{
     display: flex;
-    position: absolute;
+    position: relative;
 }
+
+
 .file .container{
     display: flex;
     flex-direction: column;
+    
     width: 100%;
     height: 100%;
+
+    position: relative;
 }
 
 .file .container .top{
     width: 100%;
-    background-color:rgb(37, 40, 48);
     height: 50px;
+
+    background-color:rgb(37, 40, 48);
+
+    position: relative;
 }
 
 .file .container .mid{
@@ -475,7 +514,8 @@ body{
     justify-content: center;
 
     width: 100%;
-    height: calc(100% - 70px);
+    height: 100%;
+
     position: relative;    
 }
 .file .container .mid .left{

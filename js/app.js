@@ -109,14 +109,11 @@ function max(){
 
     for (let i = 0; i < actionFiles.length; i++){
         actionFiles[0].classList.toggle('fileg')
-        console.log('file')
     }
     for (let i = 0; i < actionBrowser.length; i++){
         actionBrowser[0].classList.toggle('browserg')
-        console.log('brow')
     }
     for (let i = 0; i < actionConsole.length; i++){
         actionConsole[0].classList.toggle('consoleg')
-        console.log('console')
     }
 }

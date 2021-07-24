@@ -26,8 +26,8 @@
             <div class="footer">
                 <div class="dock">
                     <ul>
-                        <li><a href="#" ><img onclick="toggleConsole()" src="img/terminal.svg" alt=""></a></li>
-                        <li><a href="#"><img src="img/chrome.svg" alt=""></a></li>
+                        <li><a href="#" onclick="toggleConsole()" ><img src="img/terminal.svg" alt=""></a></li>
+                        <li><a href="#"><img onclick="toggleBrowser()" src="img/chrome.svg" alt=""></a></li>
                         <li><a href="#"><img src="img/folder.svg" alt=""></a></li>
                         <li><a href="#"><img src="img/vscode.svg" alt=""></a></li>
                         <li><a href="#"><img src="img/pycharm.svg" alt=""></a></li>
@@ -35,32 +35,37 @@
                     </ul>
                 </div>
             </div>
-            <div class="screen-action">
+            <div class="screen-action" id="screen-action">
                 <div class="dropzones">
                     <div class="dropzone"></div>
                     <div class="dropzone"></div>
                     <div class="dropzone"></div>
                     <div class="dropzone"></div>
                 </div>
+                <!-- console -->
                 <div class="console shadow-apps" draggable="true">
                     <div class="header">
                         <ul>
+                            <li><a id="min" href="#" onclick="toggleConsole()" class="cl"></a></li>
                             <li><a id="max" href="#"  class="cl"></a></li>
-                            <li><a id="min" href="#"  class="cl"></a></li>
                             <li><a id="close" href="#"  class="cl"></a></li>
                         </ul>
                     </div>
                     <p>C:\iunix\luci\Desktop <span>cd ./test</span></p>
                 </div>
-                <div class="console shadow-apps" draggable="true">
+                <!-- broswer -->
+                <div class="browser shadow-apps" draggable="true">
                     <div class="header">
                         <ul>
+                            <li><a id="min" href="#" onclick="toggleBrowser()"></a></li>
                             <li><a id="max" href="#"></a></li>
-                            <li><a id="min" href="#"></a></li>
                             <li><a id="close" href="#"></a></li>
                         </ul>
                     </div>
-                    <p>C:\iunix\luci\Desktop <span>ls -a</span></p>
+                    <div class="search">
+                        <input type="text" placeholder="Search">
+                        <img src="img/search.svg" alt="">
+                    </div>
                 </div>
             </div>
 

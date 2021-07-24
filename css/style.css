@@ -196,11 +196,15 @@ body{
     display: flex;
 }
 
+/* shadow programs opened */
+
 .app-screen .screen-action .shadow-apps{
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.473);
 }
 
-.app-screen .screen-action .console .header{
+/* header programs */
+
+.app-screen .screen-action  .header{
     width: 100%;
     left: 0;
     top: 0;
@@ -210,7 +214,7 @@ body{
     position: absolute;
     }
 
-.app-screen .screen-action .console .header ul{
+.app-screen .screen-action .header ul{
     width: 100%;
     height: 100%;
     display: flex;
@@ -218,7 +222,7 @@ body{
     justify-content: flex-end;
 }
 
-.app-screen .screen-action .console .header ul li{
+.app-screen .screen-action .header ul li{
     max-height: 20px;
     height: 20px;
     min-height: 20px;
@@ -230,7 +234,7 @@ body{
     position: relative;
 }
 
-.app-screen .screen-action .console .header ul li a{
+.app-screen .screen-action .header ul li a{
     text-decoration: none;
     padding: 3px;
 }
@@ -257,6 +261,8 @@ body{
 #max{
     background-color: rgb(78, 148, 78);
 }
+
+/* console props */
 
 .app-screen .screen-action .console p{
     color: rgb(143, 142, 151);
@@ -338,3 +344,92 @@ body{
 
 }
 
+/* browser */
+
+.app-screen .screen-action .browser{
+    width: 50vh;
+    height: 30vh;
+    background-color: rgba(47, 47, 58, 0.905);
+    backdrop-filter: blur(9px);
+    
+    border-radius: 8px;
+    
+    padding: 50px 30px 10px 20px;
+    
+    position: relative;
+    overflow: hidden;
+    
+    margin: 10px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.browser .search{
+    width: 80%;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.083);
+    border-radius: 30px;
+
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.111);
+
+    position: relative;
+    bottom: 15px;
+
+    overflow: hidden;
+}
+
+.browser input{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    padding: 5px 10px 5px 10px;
+
+    background-color: transparent;
+
+    border: none;
+    outline: none;
+
+    color: #ffffff90;
+}
+
+.browser input::placeholder{
+    color: #ffffff90;
+}
+
+.browser img{
+    position: absolute;
+    top: 0;
+    left: 45%;
+
+    width: 95%;
+    height: 95%;
+
+    object-fit: contain;
+
+    filter: invert(0.6);
+
+    cursor: pointer;
+}
+
+.app-screen .screen-action .browserf{
+    display: flex;
+}
+
+/* animation */
+
+@keyframes toggle {
+    from{
+        opacity: 0%;
+        bottom:  -20px;
+        width: 0px;
+        height: 0px;
+        display: block;
+
+    }
+    to{
+        opacity: 100%;
+    }
+}

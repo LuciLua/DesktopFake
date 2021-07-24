@@ -144,6 +144,14 @@ body{
     justify-content: center;
 
     position: relative;
+    transition: 0.1s;
+
+    bottom: 0;
+}
+
+.app-screen .footer .dock ul li:hover{
+    bottom: 5px;
+    transition: 0.1s;
 }
 
 .app-screen .footer .dock ul li a{
@@ -152,6 +160,8 @@ body{
 
     width: 100%;
     height: 100%;
+
+    user-select: none;
 }
 
 .app-screen .footer .dock ul li img{
@@ -418,9 +428,132 @@ body{
     display: flex;
 }
 
+
+/* files window */
+
+.file{
+    width: 95%;
+    height: 95%;
+    background-color: transparent;
+    backdrop-filter: blur(9px);
+    
+    border-radius: 8px;
+    
+    padding: 30px 0 0 0;
+    
+    overflow: hidden;
+    
+    margin: 10px;
+
+    align-items: center;
+    justify-content: center;
+
+    display: none;
+}
+
+.filef{
+    display: flex;
+    position: absolute;
+}
+.file .container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.file .container .top{
+    width: 100%;
+    background-color:rgb(37, 40, 48);
+    height: 50px;
+}
+
+.file .container .mid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: calc(100% - 70px);
+    position: relative;    
+}
+.file .container .mid .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(53, 57, 68);
+
+    padding: 10px;
+
+    width: 200px;
+    height: 100%;
+
+    position: relative;
+}
+
+.file .container .mid .left span{
+    color: #d0d0d0b9;
+    font-family: sans-serif;
+
+    align-self: flex-start;
+
+    margin: 5px 10px 5px 10px;
+}
+
+
+.file .container .mid .left .boxes{
+    width: 100%;
+    max-width: 100%;
+
+    min-height: 100px;
+    height: fit-content;
+
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #c7c7c710;
+
+    border: 1px solid rgba(158, 158, 158, 0.118);
+    border-radius: 5px;
+
+    margin: 5px;
+
+    position: relative;
+}
+
+
+.file .container .mid .right{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(43, 46, 54);
+
+    width: calc(100% - 200px);
+    height: 100%;
+
+    position: relative;
+    
+}
+
+.file .container .bottom{
+    width: 100%;
+    height: 20px;
+
+    background-color: rgb(30, 32, 36);
+
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+
 /* animation */
 
-@keyframes toggle {
+@keyframes toggle{
     from{
         opacity: 0%;
         bottom:  -20px;

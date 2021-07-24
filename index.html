@@ -27,8 +27,8 @@
                 <div class="dock">
                     <ul>
                         <li><a href="#" onclick="toggleConsole()" ><img src="img/terminal.svg" alt=""></a></li>
-                        <li><a href="#"><img onclick="toggleBrowser()" src="img/chrome.svg" alt=""></a></li>
-                        <li><a href="#"><img src="img/folder.svg" alt=""></a></li>
+                        <li><a href="#" onclick="toggleBrowser()"><img src="img/chrome.svg" alt=""></a></li>
+                        <li><a href="#" onclick="toggleFile()"><img src="img/folder.svg" alt=""></a></li>
                         <li><a href="#"><img src="img/vscode.svg" alt=""></a></li>
                         <li><a href="#"><img src="img/pycharm.svg" alt=""></a></li>
                         <li><a href="#"><img src="img/spotify.svg" alt=""></a></li>
@@ -47,7 +47,7 @@
                     <div class="header">
                         <ul>
                             <li><a id="min" href="#" onclick="toggleConsole()" class="cl"></a></li>
-                            <li><a id="max" href="#"  class="cl"></a></li>
+                            <li><a id="max" href="#" onclick="max()" class="cl"></a></li>
                             <li><a id="close" href="#"  class="cl"></a></li>
                         </ul>
                     </div>
@@ -58,7 +58,7 @@
                     <div class="header">
                         <ul>
                             <li><a id="min" href="#" onclick="toggleBrowser()"></a></li>
-                            <li><a id="max" href="#"></a></li>
+                            <li><a id="max" href="#" onclick="max()"></a></li>
                             <li><a id="close" href="#"></a></li>
                         </ul>
                     </div>
@@ -67,8 +67,36 @@
                         <img src="img/search.svg" alt="">
                     </div>
                 </div>
-            </div>
+                <!-- file -->
+                <div class="file shadow-apps" draggable="true">
+                    <div class="header">
+                        <ul>
+                            <li><a id="min" onclick="toggleFile()" href="#"></a></li>
+                            <li><a id="max" onclick="max()" href="#"></a></li>
+                            <li><a id="close" href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="container">
+                        <div class="top"></div>
+                        <div class="mid">
+                            <div class="left">
+                                <span>Desktop</span>
+                                <div class="boxes">
+                                    <ul>
+                                        <li>Documentos</li>
+                                        <li>Fotos</li>
+                                        <li>Videos</li>
+                                        <li>Download</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
 
+            </div>
         </div>
     </div>
 </body>

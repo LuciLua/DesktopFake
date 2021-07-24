@@ -10,6 +10,7 @@ function log(message){
 
 const appConsole = document.querySelectorAll('.console')
 const appBrowser = document.querySelectorAll('.browser')
+const appFile = document.querySelectorAll('.file')
 
 appConsole.forEach(e => {
     e.addEventListener('dragstart', dragstart)
@@ -18,6 +19,12 @@ appConsole.forEach(e => {
 })
 
 appBrowser.forEach(e => {
+    e.addEventListener('dragstart', dragstart)
+    e.addEventListener('drag', drag)
+    e.addEventListener('dragend', dragend)
+})
+
+appFile.forEach(e => {
     e.addEventListener('dragstart', dragstart)
     e.addEventListener('drag', drag)
     e.addEventListener('dragend', dragend)
@@ -70,32 +77,26 @@ function dragdrop(){
 
 }
 
-// console open
-
-function openConsole(){
-
-}
-
-
 function toggleConsole(){
-    
     const actionConsole = document.querySelectorAll('.console')
-    
     actionConsole.forEach(e => {
         e.classList.toggle('consolef')
         e.style.animation='toggle 0.2s linear'
     })
-    
-    var space = document.getElementById('screen-action')
-    for (let i = 0; i < actionConsole.length; i++){
-        // space.innerHTML += "<div class='consolef'></div>"
-    }
 }
 
 function toggleBrowser(){
-    const actionConsole = document.querySelectorAll('.browser')
-    actionConsole.forEach(e => {
+    const actionBrowser = document.querySelectorAll('.browser')
+    actionBrowser.forEach(e => {
         e.classList.toggle('browserf')
+        e.style.animation='toggle 0.2s linear'
+    })
+}
+
+function toggleFile(){
+    const actionFiles = document.querySelectorAll('.file')
+    actionFiles.forEach(e => {
+        e.classList.toggle('filef')
         e.style.animation='toggle 0.2s linear'
     })
 }

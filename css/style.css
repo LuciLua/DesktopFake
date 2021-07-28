@@ -272,6 +272,10 @@ body{
     background-color: rgb(78, 148, 78);
 }
 
+.header-app{
+    z-index: 1000;
+}
+
 /* console props */
 
 .app-screen .screen-action .console p{

@@ -51,9 +51,16 @@
                             <li><a id="close" href="#"  class="cl"></a></li>
                         </ul>
                     </div>
-                    <p>C:\iunix\luci\Desktop <span>
-                        <input type="text" value="cd ./test">
-                    </span></p>
+                    <div class="linhas">
+                        <div class="linha1">
+                            <p>C:\iunix\luci\Desktop>_ <span>
+                                <input id="commands" type="text" value="" onkeypress="'enter',comandos()">
+                            </span></p>
+                        </div>
+                        <div class="linha2">
+                            <p id="result"></p>
+                        </div>
+                    </div>
                     
                 </div>
                 <!-- browser -->
@@ -65,9 +72,12 @@
                             <li><a id="close" href="#"></a></li>
                         </ul>
                     </div>
-                    <div class="search">
+                    <!-- <div class="search">
                         <input type="text" placeholder="Search">
                         <img src="img/search.svg" alt="">
+                    </div> -->
+                    <div class="img">
+                        <img src="img/google.jpg" alt="">
                     </div>
                 </div>
                 <!-- file -->

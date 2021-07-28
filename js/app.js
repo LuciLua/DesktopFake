@@ -90,6 +90,15 @@ function toggleConsole(){
     actionConsole.forEach(e => {
         e.classList.toggle('consolef')
     })
+    const fileg = document.querySelectorAll('.fileg')
+    fileg.forEach(e=>{
+        e.classList.remove('fileg')
+    })
+    const browserg = document.querySelectorAll('.browserg')
+    browserg.forEach(e=>{
+        e.classList.remove('browserg')
+    })
+
 }
 
 function toggleBrowser(){
@@ -98,12 +107,28 @@ function toggleBrowser(){
         e.classList.toggle('browserf')
         // e.classList.add('browser')
     })
+    const fileg = document.querySelectorAll('.fileg')
+    fileg.forEach(e=>{
+        e.classList.remove('fileg')
+    })
+    const consoleg = document.querySelectorAll('.consoleg')
+    consoleg.forEach(e=>{
+        e.classList.remove('consoleg')
+    })
 }
 
 function toggleFile(){
     const actionFiles = document.querySelectorAll('.file')    
     actionFiles.forEach(e => {
         e.classList.toggle('filef')
+    })
+    const browserg = document.querySelectorAll('.browserg')
+    browserg.forEach(e=>{
+        e.classList.remove('browserg')
+    })
+    const consoleg = document.querySelectorAll('.consoleg')
+    consoleg.forEach(e=>{
+        e.classList.remove('consoleg')
     })
 }
 
@@ -112,6 +137,14 @@ function maxFile(){
     const dropzone = document.querySelectorAll('.dropzone')
     dropzone.forEach(e=>{
         e.classList.toggle('dropzoneg')
+    })
+    const browser = document.querySelectorAll('.browserf')
+    browser.forEach(e=>{
+        e.classList.remove('browserf')
+    })
+    const console = document.querySelectorAll('.consolef')
+    console.forEach(e=>{
+        e.classList.remove('consolef')
     })
 
     const actionFiles = document.querySelectorAll('.filef')   
@@ -125,8 +158,17 @@ function maxBrowser(){
     const dropzone = document.querySelectorAll('.dropzone')
     dropzone.forEach(e=>{
         e.classList.toggle('dropzoneg')
-        log(this)
     }) 
+
+    const file = document.querySelectorAll('.filef')
+    file.forEach(e=>{
+        e.classList.remove('filef')
+    })
+    const console = document.querySelectorAll('.consolef')
+    console.forEach(e=>{
+        e.classList.remove('consolef')
+    })
+
 
     const actionBrowser = document.querySelectorAll('.browserf')
     for (let i = 0; i < actionBrowser.length; i++){
@@ -139,8 +181,38 @@ function maxConsole(){
     dropzone.forEach(e=>{
         e.classList.toggle('dropzoneg')
     })
+
+    const file = document.querySelectorAll('.filef')
+    file.forEach(e=>{
+        e.classList.remove('filef')
+    })
+    const browser = document.querySelectorAll('.browserf')
+    browser.forEach(e=>{
+        e.classList.remove('browserf')
+    })
+
     const actionConsole = document.querySelectorAll('.consolef')
     for (let i = 0; i < actionConsole.length; i++){
         actionConsole[0].classList.toggle('consoleg')
+    }
+}
+
+function comandos(){
+    var valueConsole = document.getElementById('commands')
+    var result = document.getElementById('result')
+    if(valueConsole.value == '/hello'){
+        result.innerHTML = '>_Pass'
+    } 
+    
+    else if (valueConsole.value == '/luci'){
+        result.innerHTML = '>_Oi, Sou eu'
+        
+    }
+    else if (valueConsole.value == '/hackear'){
+        result.innerHTML = '>_ !Pentagono HackeadO!'   
+    }
+    
+    else {
+        result.innerHTML = 'código inválido!'
     }
 }

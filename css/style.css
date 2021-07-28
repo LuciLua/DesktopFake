@@ -186,6 +186,11 @@ body{
 
 
 .app-screen .screen-action .console{
+    display: none;
+    transition: 400ms;
+}
+
+.app-screen .screen-action .consolef{
     width: 50vh;
     height: 30vh;
     background-color: rgb(39, 39, 39);
@@ -198,12 +203,9 @@ body{
     overflow: hidden;
     
     margin: 10px;
-
-    display: none;
-}
-
-.app-screen .screen-action .consolef{
     display: flex;
+
+    transition: 400ms;
 }
 
 /* shadow programs opened */
@@ -278,7 +280,7 @@ body{
 
 /* console props */
 
-.app-screen .screen-action .console p{
+.app-screen .screen-action .consolef p{
     color: rgb(143, 142, 151);
     font-family: sans-serif;
     font-size: clamp(13px, 1.2vw, 17px);
@@ -286,11 +288,11 @@ body{
     letter-spacing: 1px;
 }
 
-.app-screen .screen-action .console p span{
+.app-screen .screen-action .consolef p span{
     color: green;
 }
 
-.app-screen .screen-action .console p input{
+.app-screen .screen-action .consolef p input{
     background-color: transparent;
     border: none;
     outline: none;
@@ -321,7 +323,7 @@ body{
     cursor: default;
 }
 
-.dropzoneG{
+.dropzoneg{
     width: 100%;
     height: 100%;
 }
@@ -352,8 +354,7 @@ body{
     align-items: center;
 }
 
-
-.console, .dropzone{
+.dropzone, .dropzoneg{
     transition: 400ms; 
 }
 
@@ -361,9 +362,8 @@ body{
     cursor: move;
     opacity: 0.3;
 }
-
 .over{
-    background-color: rgba(77, 77, 77, 0.289);
+    background-color: rgba(135, 41, 41, 0.09);
 
 }
 
@@ -373,9 +373,13 @@ body{
 /* browser */
 
 .app-screen .screen-action .browser{
+    display: none;
+}
+
+.app-screen .screen-action .browserf{
     width: 50vh;
     height: 30vh;
-    background-color: rgba(47, 47, 58, 0.905);
+    background-color: rgb(47, 47, 58);
     backdrop-filter: blur(9px);
     
     border-radius: 8px;
@@ -386,17 +390,16 @@ body{
     
     margin: 10px;
     
-    display: none;
     align-items: center;
     justify-content: center;
-
+    
     position: relative;
-
+    
     transition: 400ms;
+    display: flex;
 }
 
-
-.browser .search{
+.browserf .search{
     width: 80%;
     height: 30px;
     background-color: rgba(255, 255, 255, 0.083);
@@ -410,7 +413,7 @@ body{
     overflow: hidden;
 }
 
-.browser input{
+.browserf input{
     width: 100%;
     height: 100%;
 
@@ -425,11 +428,11 @@ body{
     color: #ffffff90;
 }
 
-.browser input::placeholder{
+.browserf input::placeholder{
     color: #ffffff90;
 }
 
-.browser img{
+.browserf img{
     position: absolute;
     top: 0;
     left: 45%;
@@ -444,23 +447,23 @@ body{
     cursor: pointer;
 }
 
-.app-screen .screen-action .browserf{
-    display: flex;
-}
-
-.app-screen .screen-action .browserg{
-    width: 80%;
-    height: 100%;
-    position: absolute;
-}
-
-
 /* files window */
 
 .file{
+    display: none;
+    transition: 400ms; 
+}
+
+.filef .header{
+    background-color: rgba(26, 26, 26, 0.808);
+}
+
+.app-screen .screen-action .filef{
+    display: flex;
+    
     width: 50vh;
     height: 30vh;
-    background-color: transparent;
+    background-color: #2a2a2efd;
     
     border-radius: 8px;
     
@@ -475,30 +478,10 @@ body{
 
     position: relative;
     
-    display: none;
-
     transition: 400ms; 
 }
 
-.file .header{
-    background-color: rgba(26, 26, 26, 0.808);
-}
-
-.app-screen .screen-action .fileg, 
-.app-screen .screen-action .browserg, 
-.app-screen .screen-action .consoleg{
-    width: calc(100% - 30px);
-    height: calc(100% - 30px);
-    position: absolute;
-}
-
-.filef{
-    display: flex;
-    position: relative;
-}
-
-
-.file .container{
+.filef .container{
     display: flex;
     flex-direction: column;
     
@@ -508,7 +491,7 @@ body{
     position: relative;
 }
 
-.file .container .top{
+.filef .container .top{
     width: 100%;
     height: 32px;
 
@@ -520,7 +503,7 @@ body{
     position: relative;
 }
 
-.file .container .top ul{
+.filef .container .top ul{
     display: flex;
 
     list-style: none;
@@ -529,17 +512,16 @@ body{
     position: relative;
 }
 
-
-.file .container .top ul:nth-child(1){
+.filef .container .top ul:nth-child(1){
     width: 50%;
     justify-content: flex-start;
 }
-.file .container .top ul:nth-child(2){
+.filef .container .top ul:nth-child(2){
     width: 50%;
     justify-content: flex-end;
 }
 
-.file .container .top ul li{
+.filef .container .top ul li{
     margin: 5px 10px 5px 10px;
 
     width: 20px;
@@ -561,7 +543,7 @@ body{
     border-radius: 4px;
 }
 
-.file .container .mid{
+.filef .container .mid{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -572,7 +554,7 @@ body{
 
     position: relative;    
 }
-.file .container .mid .left{
+.filef .container .mid .left{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -587,7 +569,7 @@ body{
     position: relative;
 }
 
-.file .container .mid .left span{
+.filef .container .mid .left span{
     color: #d0d0d0b9;
     font-family: sans-serif;
 
@@ -597,7 +579,7 @@ body{
 }
 
 
-.file .container .mid .left .boxes{
+.filef .container .mid .left .boxes{
     width: 100%;
     max-width: 100%;
 
@@ -619,7 +601,7 @@ body{
     position: relative;
 }
 
-.file .container .mid .left .boxes ul{
+.filef .container .mid .left .boxes ul{
     list-style: none;
     
     width: 100%;
@@ -627,7 +609,7 @@ body{
     position: relative;
 }
 
-.file .container .mid .left .boxes ul li{
+.filef .container .mid .left .boxes ul li{
     color: rgb(152, 153, 158);
     font-size: 14px;
     font-family: Arial;
@@ -638,7 +620,7 @@ body{
     flex-direction: row;
 }
 
-.file .container .mid .left .boxes ul li img{
+.filef .container .mid .left .boxes ul li img{
     filter: invert(0.5);
     width: 19px;
     height: 19px;
@@ -646,11 +628,11 @@ body{
     object-fit: contain;
 }
 
-.file .container .mid .left .boxes ul li span{
+.filef .container .mid .left .boxes ul li span{
     margin: 0 5px 0 5px;
 }
 
-.file .container .mid .right{
+.filef .container .mid .right{
     display: flex;
     flex-direction: column;
     background-color: rgb(43, 46, 54);
@@ -662,7 +644,7 @@ body{
     
 }
 
-.file .container .bottom{
+.filef .container .bottom{
     width: 100%;
     height: 20px;
 
@@ -673,6 +655,13 @@ body{
 
 }
 
+.app-screen .screen-action .fileg, 
+.app-screen .screen-action .browserg, 
+.app-screen .screen-action .consoleg{
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    position: absolute;
+}
 
 
 /* animation */

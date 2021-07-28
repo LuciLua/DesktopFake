@@ -96,21 +96,24 @@ function toggleBrowser(){
     const actionBrowser = document.querySelectorAll('.browser')
     actionBrowser.forEach(e => {
         e.classList.toggle('browserf')
+        // e.classList.add('browser')
     })
 }
 
 function toggleFile(){
-    const actionFiles = document.querySelectorAll('.file')
+    const actionFiles = document.querySelectorAll('.file')    
     actionFiles.forEach(e => {
         e.classList.toggle('filef')
     })
 }
 
 function maxFile(){
+
     const dropzone = document.querySelectorAll('.dropzone')
     dropzone.forEach(e=>{
-        e.classList.toggle('dropzoneG')
+        e.classList.toggle('dropzoneg')
     })
+
     const actionFiles = document.querySelectorAll('.filef')   
     for (let i = 0; i < actionFiles.length; i++){
         actionFiles[0].classList.toggle('fileg')
@@ -118,10 +121,13 @@ function maxFile(){
 }
 
 function maxBrowser(){  
+
     const dropzone = document.querySelectorAll('.dropzone')
     dropzone.forEach(e=>{
-        e.classList.toggle('dropzoneG')
+        e.classList.toggle('dropzoneg')
+        log(this)
     }) 
+
     const actionBrowser = document.querySelectorAll('.browserf')
     for (let i = 0; i < actionBrowser.length; i++){
         actionBrowser[0].classList.toggle('browserg')
@@ -131,7 +137,7 @@ function maxBrowser(){
 function maxConsole(){
     const dropzone = document.querySelectorAll('.dropzone')
     dropzone.forEach(e=>{
-        e.classList.toggle('dropzoneG')
+        e.classList.toggle('dropzoneg')
     })
     const actionConsole = document.querySelectorAll('.consolef')
     for (let i = 0; i < actionConsole.length; i++){

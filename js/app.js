@@ -101,18 +101,22 @@ function toggleFile(){
     })
 }
 
-function max(){
-    const actionFiles = document.querySelectorAll('.filef')
-    const actionBrowser = document.querySelectorAll('.browserf')
-    const actionConsole = document.querySelectorAll('.consolef')
-    
-
+function maxFile(){
+    const actionFiles = document.querySelectorAll('.filef')   
     for (let i = 0; i < actionFiles.length; i++){
         actionFiles[0].classList.toggle('fileg')
     }
+}
+
+function maxBrowser(){
+    const actionBrowser = document.querySelectorAll('.browserf')
     for (let i = 0; i < actionBrowser.length; i++){
         actionBrowser[0].classList.toggle('browserg')
     }
+}
+
+function maxConsole(){
+    const actionConsole = document.querySelectorAll('.consolef')
     for (let i = 0; i < actionConsole.length; i++){
         actionConsole[0].classList.toggle('consoleg')
     }

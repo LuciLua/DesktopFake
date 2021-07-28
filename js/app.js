@@ -44,10 +44,10 @@ function dragend(){
     dropzone.forEach(dropzone => dropzone.classList.remove('highlight'))
 
     this.classList.remove('is-dragging')
-
 }
 
 const dropzone = document.querySelectorAll('.dropzone')
+const dropzones = document.querySelectorAll('.dropzone')
 
 dropzone.forEach( dropzone => {
     dropzone.addEventListener('dragenter', dragenter)
@@ -56,7 +56,15 @@ dropzone.forEach( dropzone => {
     dropzone.addEventListener('dragdrop', dragdrop)
 })
 
+dropzones.forEach( dropzone => {
+    dropzone.addEventListener('dragenter', dragenter)
+    dropzone.addEventListener('dragover', dragover)
+    dropzone.addEventListener('dragleave', dragleave)
+    dropzone.addEventListener('dragdrop', dragdrop)
+})
+
 function dragenter(){
+    log('ola')
 }
 
 function dragover(){
@@ -69,11 +77,11 @@ function dragover(){
 }
 
 function dragleave(){
-    this.classList.remove('over')
-   
+    this.classList.remove('over')    
 }
 
 function dragdrop(){
+    // this.style.animation='toggle 0.7s linear'
 
 }
 
@@ -81,7 +89,6 @@ function toggleConsole(){
     const actionConsole = document.querySelectorAll('.console')
     actionConsole.forEach(e => {
         e.classList.toggle('consolef')
-        e.style.animation='toggle 0.2s linear'
     })
 }
 
@@ -89,7 +96,6 @@ function toggleBrowser(){
     const actionBrowser = document.querySelectorAll('.browser')
     actionBrowser.forEach(e => {
         e.classList.toggle('browserf')
-        e.style.animation='toggle 0.2s linear'
     })
 }
 
@@ -97,18 +103,25 @@ function toggleFile(){
     const actionFiles = document.querySelectorAll('.file')
     actionFiles.forEach(e => {
         e.classList.toggle('filef')
-        e.style.animation='toggle 0.2s linear'
     })
 }
 
 function maxFile(){
+    const dropzone = document.querySelectorAll('.dropzone')
+    dropzone.forEach(e=>{
+        e.classList.toggle('dropzoneG')
+    })
     const actionFiles = document.querySelectorAll('.filef')   
     for (let i = 0; i < actionFiles.length; i++){
         actionFiles[0].classList.toggle('fileg')
     }
 }
 
-function maxBrowser(){
+function maxBrowser(){  
+    const dropzone = document.querySelectorAll('.dropzone')
+    dropzone.forEach(e=>{
+        e.classList.toggle('dropzoneG')
+    }) 
     const actionBrowser = document.querySelectorAll('.browserf')
     for (let i = 0; i < actionBrowser.length; i++){
         actionBrowser[0].classList.toggle('browserg')
@@ -116,6 +129,10 @@ function maxBrowser(){
 }
 
 function maxConsole(){
+    const dropzone = document.querySelectorAll('.dropzone')
+    dropzone.forEach(e=>{
+        e.classList.toggle('dropzoneG')
+    })
     const actionConsole = document.querySelectorAll('.consolef')
     for (let i = 0; i < actionConsole.length; i++){
         actionConsole[0].classList.toggle('consoleg')

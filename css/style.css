@@ -317,6 +317,11 @@ body{
     cursor: default;
 }
 
+.dropzoneG{
+    width: 100%;
+    height: 100%;
+}
+
 .dropzone:nth-child(1){
     left: 0;
     top: 0;
@@ -350,7 +355,7 @@ body{
 
 .is-dragging{
     cursor: move;
-    opacity: 0.7;
+    opacity: 0.3;
 }
 
 .over{
@@ -359,7 +364,6 @@ body{
 }
 
 .is-dragging{
-
 }
 
 /* browser */
@@ -444,7 +448,6 @@ body{
     width: 80%;
     height: 100%;
     position: absolute;
-
 }
 
 

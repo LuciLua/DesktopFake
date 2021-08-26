@@ -489,6 +489,10 @@ width: 100%;
     
     width: 50vh;
     height: 30vh;
+    max-width: 1400px;
+    min-width: 700px;
+    min-height: 500px;
+
     background-color: #2a2a2efd;
     
     border-radius: 8px;
@@ -606,6 +610,13 @@ width: 100%;
     top: 0;
 }
 
+.filef .container .mid .row .left .boxes,
+.filef .container .mid .row .right{
+    /* overflow-y: scroll; */
+    overflow-x: hidden;
+}
+
+
 .filef .container .mid .row .left{
     display: flex;
     flex-direction: column;
@@ -703,8 +714,7 @@ width: 100%;
     width: calc(100% - 200px);
     height: 100%;
 
-    position: relative;
-    
+    position: relative;    
 }
 
 .filef .container .mid .right .header{
@@ -712,6 +722,49 @@ width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.filef .container .mid .row .right .body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(43, 43, 43, 0.83);
+}
+
+.filef .container .mid .row .right .body .folders{
+    width: 90%;
+    height: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    background-color: rgba(26, 24, 24, 0.371);
+    border-radius: 5px;
+
+    position: relative;
+}
+
+.filef .container .mid .row .right .body .folders .folder{
+    width: 50px;
+    height: 50px;
+
+    background-image: url('/img/folder.svg');
+    margin: 10px;
+}
+
+.filef .container .mid .row .right .body .folders .folder:after{
+    content: 'Folder name';
+    position: relative;
+    bottom: -10px;
+    font-size: 10px;
+    color: #fff;
 }
 
 .filef .container .bottom{

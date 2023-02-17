@@ -1,0 +1,25 @@
+*::before,
+*,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Global variables
+:root {
+    --header-height: 4%;
+    --footer-height: 8%;
+    --mainScreen-height:
+        calc(100% - calc(var(--header-height) + var(--footer-height)));
+
+    --desktop-width: 1400px;
+    --desktop-height: 800px;
+}

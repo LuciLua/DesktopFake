@@ -1,0 +1,16 @@
+.c_header {
+    width: 100%;
+    height: var(--header-height);
+    background-color: #202126;
+    
+    color: #fff;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 20px;
+
+    z-index: 10;
+}

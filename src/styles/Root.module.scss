@@ -1,0 +1,53 @@
+body.wrap {
+    background: rgb(238, 174, 202);
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(215, 179, 202, 1) 33%, rgba(148, 187, 233, 1) 91%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+    
+    .desktop_container {
+        width: 100%;
+        height: 100%;
+        
+        max-width: var(--desktop-width);
+        max-height: var(--desktop-height);
+        
+        position: relative;
+        background-color: #1e1e1e;
+
+        border-radius: 10px;
+        overflow: hidden;
+
+        .background{
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            top: 0;
+            position: absolute;
+
+            img{
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .wrap {
+        &::before {
+            color: #121212;
+            position: absolute;
+            content: '🖥️ Only avaliable for computer';
+        }
+
+        .desktop_container {
+            display: none;
+        }
+    }
+}

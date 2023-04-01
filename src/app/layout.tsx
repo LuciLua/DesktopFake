@@ -9,7 +9,13 @@ import WindowContextProvider from "../contexts/WindowContext"
 
 export default function RootApp({ children }) {
     return (
-        <html>
+        <html lang="en">
+            <head>
+                <meta charSet="UTF-8" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Desktop Fake</title>
+            </head>
             <body className={styles.wrap}>
                 <div className={styles.desktop_container}>
                     <WindowContextProvider>

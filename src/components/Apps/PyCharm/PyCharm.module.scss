@@ -1,0 +1,168 @@
+.container {
+    background-color: rgb(26, 26, 36);
+    width: 100%;
+    height: 100%;
+
+    font-family: inherit;
+    user-select: none;
+
+    .content {
+        width: 100%;
+        height: 100%;
+        padding-top: 30px;
+        color: rgb(211, 211, 211);
+
+        font-size: 15px;
+
+        display: flex;
+        flex-direction: column;
+
+        position: relative;
+
+        header.mainHeader {
+            width: 100%;
+            display: flex;
+
+            background-color: rgb(36, 36, 42);
+            border-bottom: 1px solid #38373d;
+
+            ul.ulmainHeader {
+                width: 100%;
+                display: flex;
+
+                gap: 20px;
+                margin: 2px 5px;
+
+                li {
+                    list-style: none;
+
+                    button {
+                        background-color: transparent;
+                        border: none;
+                        color: #dbdbdb;
+                    }
+                }
+            }
+        }
+
+        .c_project {
+            display: flex;
+            height: 100%;
+            width: 100%;
+
+            z-index: 200;
+
+            position: relative;
+
+            aside {
+                background-color: rgb(35, 35, 40);
+                height: 100%;
+                width: 200px;
+
+                display: flex;
+                flex-direction: column;
+
+                padding: 10px;
+                gap: 5px;
+
+                h1 {
+                    color: #dbdbdb;
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                }
+
+                p {
+                    color: #9e9d9d;
+                    font-size: 15px;
+                }
+            }
+
+            .project {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                display: flex;
+                flex-direction: column;
+
+
+                header {
+                    background-color: rgb(52, 52, 59);
+                    display: flex;
+                    width: 100%;
+                    box-shadow: 0 5px 32px #0000001c;
+                    height: 30px;
+
+                    position: relative;
+
+                    ul {
+                        margin: 0;
+
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+
+                        gap: 1px;
+
+                        position: relative;
+
+
+                        li {
+                            background-color: rgb(45, 45, 52);
+                            list-style: none;
+                            width: fit-content;
+
+                            button {
+                                height: 100%;
+                                border: none;
+                                background-color: transparent;
+                                padding: 0 20px;
+                                color: rgb(127, 127, 127);
+                            }
+                        }
+                    }
+                }
+
+                main {
+                    user-select: all;
+                    display: flex;
+                    max-height: 100%;
+                    height: 100%;
+                    width: 100%;
+
+
+                    position: relative;
+
+                    textarea {
+                        width: 100%;
+                        height: 100%;
+
+                        resize: none;
+                        background-color: transparent;
+                        border: none;
+
+                        color: inherit;
+
+                        padding: 10px;
+
+
+                        outline: none;
+
+                        &::-webkit-scrollbar {
+                            display: none;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        footer {
+            background-color: rgb(46, 45, 68);
+            width: 100%;
+            height: 20px;
+
+            position: relative;
+        }
+    }
+}

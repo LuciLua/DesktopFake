@@ -6,7 +6,9 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
+    height: 100%;
+    width: 100%;
     max-height: 100vh;
     display: flex;
     justify-content: center;
@@ -15,11 +17,11 @@ body {
 
 // Global variables
 :root {
-    --header-height: 4%;
-    --footer-height: 8%;
+    --header-height: 3%;
+    --footer-height: 6%;
     --mainScreen-height:
         calc(100% - calc(var(--header-height) + var(--footer-height)));
 
-    --desktop-width: 1400px;
-    --desktop-height: 800px;
+    --desktop-width: 1900px;
+    --desktop-height: 900px;
 }

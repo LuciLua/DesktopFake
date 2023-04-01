@@ -6,14 +6,11 @@ import { WindowContext } from "../contexts/WindowContext"
 
 export default function Desktop() {
 
-    const { openWindow, setOpenWindow } = useContext(WindowContext)
+    const { app, openWindow, maximizeWindow } = useContext(WindowContext)
 
     return (
         <>
-            {openWindow ?
-                <Window>
-                    Some Content Here
-                </Window> : null}
+            {openWindow ? <Window size={maximizeWindow} open={app} /> : null}
         </>
     )
 }

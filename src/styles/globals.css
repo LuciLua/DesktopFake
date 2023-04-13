@@ -25,3 +25,10 @@ html, body {
     --desktop-width: 1900px;
     --desktop-height: 900px;
 }
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;

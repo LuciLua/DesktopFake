@@ -1,4 +1,4 @@
-import styles from "./Terminal.module.scss"
+import styles from "./Terminal.module.css"
 import { Fira_Code } from "next/font/google"
 
 const firacode = Fira_Code({ subsets: ["latin"], weight: "variable" })

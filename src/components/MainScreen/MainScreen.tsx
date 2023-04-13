@@ -1,8 +1,6 @@
-import styles from "./MainScreen.module.scss"
-
 function MainScreen({ children }) {
     return (
-        <div className={styles.c_main_screen}>
+        <div className="relative h-[calc(100%-calc(30px+70px))] w-full z-10 flex justify-center items-center">
             {children}
         </div>
     )

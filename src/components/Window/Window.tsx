@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef } from "react"
 import { WindowContext } from "../../contexts/WindowContext"
-import styles from "./Window.module.scss"
+// import styles from "./Window.module.css"
 
 import Spotify from "../Apps/Spotify/Spotify"
 import PyCharm from "../Apps/PyCharm/PyCharm"
@@ -35,17 +35,17 @@ function Window({ size, open }) {
     }
 
     return (
-        <div className={styles.c_window} ref={c_window}>
-            <header className={styles.window_tab}>
-                <ul className={styles.tab_icons}>
+        <div className="w-[600px] h-[400px] rounded-[10px] bg-[#000000cb] text-[#fff] flex justify-center items-center relative overflow-hidden top-0 backdrop-blur-[15px]" ref={c_window}>
+            <header className="absolute top-0 bg-[rgba(22,24,28,0.848)] h-[30px] w-full flex justify-center items-center z-[40]">
+                <ul className="flex mr-auto ml-[20px] gap-[8px] w-full">
                     <li
-                        className={styles.tab_icon}
+                        className="list-none h-[12px] w-[12px] rounded-[60%] flex justify-center items-center cursor-pointer transition-[0.2s] bg-[rgb(224,67,67)] hover:brightness-[0.9] hover:scale-[0.98]"
                         onClick={() => setOpenWindow(false)} />
                     <li
-                        className={styles.tab_icon}
+                        className="list-none h-[12px] w-[12px] rounded-[60%] flex justify-center items-center cursor-pointer transition-[0.2s] bg-[rgb(255,208,0)] hover:brightness-[0.9] hover:scale-[0.98]"
                         onClick={() => maximizeWindow ? setMaximizeWindow(false) : setMaximizeWindow(true)} />
                     <li
-                        className={styles.tab_icon}
+                        className="list-none h-[12px] w-[12px] rounded-[60%] flex justify-center items-center cursor-pointer transition-[0.2s] bg-[rgb(238,238,238)] hover:brightness-[0.9] hover:scale-[0.98]"
                         onClick={() => setMinimalizeWindow(false)} />
                 </ul>
             </header>
